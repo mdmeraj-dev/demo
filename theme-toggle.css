@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body.dark-theme {
+  background-color: rgba(29, 28, 28, 0.856); /* Dark theme background */
+  color: white; /* Dark theme text color */
+}
+
+.theme-toggle {
+  position: relative;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #eef2ff; /* Light theme button background */
+  cursor: pointer;
+  box-shadow: 0 0px 8px rgba(0, 0, 0, 0.4);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.theme-toggle:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6); /* Slightly deeper shadow on hover */
+}
+
+.theme-toggle::after {
+  content: attr(data-tooltip); /* Tooltip text from data-tooltip attribute */
+  position: absolute;
+  top: calc(100% + 2px);
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: #fff;
+  padding: 4px 8px;
+  font-size: 14px;
+  font-weight: 400;
+  border-radius: 4px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  pointer-events: none;
+  white-space: nowrap; /* Prevent text wrapping */
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.theme-toggle:hover::after {
+  opacity: 1;
+  transform: translateX(-50%) translateY(4px); /* Subtle downward animation */
+}
+
+.theme-toggle svg {
+  font-size: 20px;
+  color: #555; /* Default icon color */
+  transition: color 0.3s ease;
+}
+
+.theme-toggle svg:last-child {
+  display: none; /* Hide moon icon by default */
+}
+
+.dark-theme .theme-toggle {
+  background-color: rgba(32, 31, 31, 0.92); /* Dark theme button background */
+}
+
+.dark-theme .theme-toggle svg:first-child {
+  display: none; /* Hide sun icon in dark mode */
+}
+
+.dark-theme .theme-toggle svg:last-child {
+  display: block; /* Show moon icon in dark mode */
+  color: white; /* Adjust icon color for dark theme */
+}
+
+.content {
+  text-align: center;
+  padding: 20px;
+}

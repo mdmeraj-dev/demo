@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navigation Bar</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="search.css" />
+    <link rel="stylesheet" href="theme-toggle.css" />
+  </head>
+  <body>
+    <nav class="nav-main" role="navigation">
+      <div class="nav-left">
+        <!-- Menu Icon -->
+        <button class="menu-icon" aria-label="Toggle menu">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="24px"
+            viewBox="0 -960 960 960"
+            width="24px"
+            fill="#333"
+          >
+            <path
+              d="M120-240v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"
+            />
+          </svg>
+        </button>
+        <!-- Company Logo -->
+        <div class="company-logo">Preview</div>
+      </div>
+
+      <div class="nav-middle">
+        <!-- Search Bar -->
+        <div>
+          <button id="searchButton" class="search-btn">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 960 960"
+              fill="#333"
+            >
+              <path
+                d="M784 840L532 588q-30 24-69 38t-83 14q-109 0-184.5-75.5T120 380q0-109 75.5-184.5T380 120q109 0 184.5 75.5T640 380q0 44-14 83t-38 69l252 252-56 56ZM380 560q75 0 127.5-52.5T560 380q0-75-52.5-127.5T380 200q-75 0-127.5 52.5T200 380q0 75 52.5 127.5T380 560Z"
+              />
+            </svg>
+          </button>
+
+          <button id="closeButton" class="close-btn">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 -960 960 960"
+              width="24px"
+              fill="#333"
+            >
+              <path
+                d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="nav-right">
+        <!-- Navigation Links -->
+        <ul class="nav-links">
+          <li>
+            <a href="#" class="explore-link">
+              <span>Explore</span>
+
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="24px"
+                viewBox="0 -960 960 960"
+                width="24px"
+                fill="currentColor"
+              >
+                <path
+                  d="M480-345 240-585l56-56 184 183 184-183 56 56-240 240Z"
+                />
+              </svg>
+            </a>
+          </li>
+          <li><a href="#">Products</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Support</a></li>
+        </ul>
+
+        <div class="theme-container">
+          <button class="theme-toggle" data-tooltip="Dark theme">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 -960 960 960"
+              width="24px"
+              fill="currentColor"
+            >
+              <path
+                d="M484-100q-79.8 0-149.63-30.27t-121.83-82.27q-52-52-82.27-121.83Q100-404.2 100-484q0-131.38 80.12-234.04 80.11-102.65 207.19-134.65-11.08 96.31 19.84 186.77 30.93 90.46 99.62 159.15 68.69 68.69 159.15 99.62 90.46 30.92 186.77 19.84-31.38 127.08-134.35 207.19Q615.38-100 484-100Zm0-60q88 0 163-44t118-121.11q-86-8.01-163-43.56-77-35.55-138-96.63t-97-137.89Q331-680 324-766q-77 43-120.5 118.5T160-484q0 135 94.5 229.5T484-160Zm-20-305.38Z"
+              />
+            </svg>
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 -960 960 960"
+              width="24px"
+              fill="currentColor"
+            >
+              <path
+                d="M480-360q50 0 85-35t35-85q0-50-35-85t-85-35q-50 0-85 35t-35 85q0 50 35 85t85 35Zm0 60q-74.92 0-127.46-52.54Q300-405.08 300-480q0-74.92 52.54-127.46Q405.08-660 480-660q74.92 0 127.46 52.54Q660-554.92 660-480q0 74.92-52.54 127.46Q554.92-300 480-300ZM200-450H50v-60h150v60Zm710 0H760v-60h150v60ZM450-760v-150h60v150h-60Zm0 710v-150h60v150h-60ZM262.92-656.92l-93.69-90.46 42.39-44.39 90.23 92.69-38.93 42.16Zm485.46 488.69-90.84-93.31 39.54-41.54 93.69 90.46-42.39 44.39Zm-91.46-528.85 90.46-93.69 44.39 42.39-92.69 90.23-42.16-38.93ZM168.23-211.62l93.31-90.84 40.77 39.54-90.08 94.07-44-42.77ZM480-480Z"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <!-- User Authentication -->
+        <div class="user-auth">
+          <button class="btn login-btn" aria-label="Log in">Log in</button>
+          <button class="btn signup-btn" aria-label="Sign up">Sign up</button>
+        </div>
+      </div>
+    </nav>
+    <div class="search-container">
+      <div id="searchBar" class="search-bar">
+        <!-- Search Input -->
+        <input
+          type="text"
+          id="searchInput"
+          class="search-input"
+          placeholder="Search..."
+          aria-label="Search input"
+        />
+
+        <!-- Search Icon -->
+        <svg
+          class="search-icon"
+          xmlns="http://www.w3.org/2000/svg"
+          width="30"
+          height="30"
+          viewBox="0 0 960 960"
+          fill="#333"
+          aria-hidden="true"
+        >
+          <path
+            d="M784 840L532 588q-30 24-69 38t-83 14q-109 0-184.5-75.5T120 380q0-109 75.5-184.5T380 120q109 0 184.5 75.5T640 380q0 44-14 83t-38 69l252 252-56 56ZM380 560q75 0 127.5-52.5T560 380q0-75-52.5-127.5T380 200q-75 0-127.5 52.5T200 380q0 75 52.5 127.5T380 560Z"
+          />
+        </svg>
+
+        <!-- Close Button -->
+        <button id="clearButton" class="clear-btn" aria-label="Close">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 960 960"
+            fill="currentColor"
+            aria-hidden="true"
+          >
+            <path
+              d="M256 760l-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+  
+    <!-- Sidebar for Mobile -->
+    <aside class="nav-sidebar">
+      <div class="sidebar-header">
+        <button id="closeIcon" class="close-icon" aria-label="Close menu">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="24px"
+            viewBox="0 -960 960 960"
+            width="24px"
+            fill="#333"
+          >
+            <path
+              d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
+            />
+          </svg>
+        </button>
+        <div class="company-logo">Preview</div>
+
+        <div class="theme-container">
+          <button
+            id="themeToggle"
+            class="theme-toggle"
+            data-tooltip="Dark theme"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 -960 960 960"
+              width="24px"
+              fill="currentColor"
+            >
+              <path
+                d="M484-100q-79.8 0-149.63-30.27t-121.83-82.27q-52-52-82.27-121.83Q100-404.2 100-484q0-131.38 80.12-234.04 80.11-102.65 207.19-134.65-11.08 96.31 19.84 186.77 30.93 90.46 99.62 159.15 68.69 68.69 159.15 99.62 90.46 30.92 186.77 19.84-31.38 127.08-134.35 207.19Q615.38-100 484-100Zm0-60q88 0 163-44t118-121.11q-86-8.01-163-43.56-77-35.55-138-96.63t-97-137.89Q331-680 324-766q-77 43-120.5 118.5T160-484q0 135 94.5 229.5T484-160Zm-20-305.38Z"
+              />
+            </svg>
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 -960 960 960"
+              width="24px"
+              fill="currentColor"
+            >
+              <path
+                d="M480-360q50 0 85-35t35-85q0-50-35-85t-85-35q-50 0-85 35t-35 85q0 50 35 85t85 35Zm0 60q-74.92 0-127.46-52.54Q300-405.08 300-480q0-74.92 52.54-127.46Q405.08-660 480-660q74.92 0 127.46 52.54Q660-554.92 660-480q0 74.92-52.54 127.46Q554.92-300 480-300ZM200-450H50v-60h150v60Zm710 0H760v-60h150v60ZM450-760v-150h60v150h-60Zm0 710v-150h60v150h-60ZM262.92-656.92l-93.69-90.46 42.39-44.39 90.23 92.69-38.93 42.16Zm485.46 488.69-90.84-93.31 39.54-41.54 93.69 90.46-42.39 44.39Zm-91.46-528.85 90.46-93.69 44.39 42.39-92.69 90.23-42.16-38.93ZM168.23-211.62l93.31-90.84 40.77 39.54-90.08 94.07-44-42.77ZM480-480Z"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div class="sidebar-body">
+        <ul class="nav-links">
+          <li>
+            <a href="#" class="explore-link">
+              <span>Explore</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="24px"
+                viewBox="0 -960 960 960"
+                width="24px"
+                fill="currentColor"
+              >
+                <path
+                  d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z"
+                />
+              </svg>
+            </a>
+          </li>
+          <li><a href="#">Products</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Support</a></li>
+        </ul>
+      </div>
+      <div class="sidebar-footer">
+        <div class="user-auth">
+          <button class="btn login-btn" aria-label="Log in">Log in</button>
+          <button class="btn signup-btn" aria-label="Sign up">Sign up</button>
+        </div>
+      </div>
+    </aside>
+
+    <script src="script.js"></script>
+    <script src="theme-toggle.js"></script>
+    <script src="search.js"></script>
+  </body>
+</html>
